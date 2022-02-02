@@ -8,8 +8,8 @@ type CreateProps = {
 const Create: FC<CreateProps> = ({ handleStepChanged }) => {
   const [value, setValue] = useState("");
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
   };
 
   const handleCreate = () => {
