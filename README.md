@@ -2,6 +2,7 @@
 
 ## STACK
 Front: React,TS
+
 Back: Node.js(strapi)
 
 ## WIP
