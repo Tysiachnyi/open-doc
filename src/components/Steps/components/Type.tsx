@@ -1,15 +1,18 @@
-import { ChangeEvent, FC, useState } from "react";
-import { TYPE_SELECT } from "../../../constants/misc";
-import { STEPS } from "../../../constants/Steps";
+import { ChangeEvent, FC, useState } from 'react';
+import { TYPE_SELECT } from '../../../constants/misc';
+import { STEPS } from '../../../constants/Steps';
+import { toTitleCase } from '../../../utils/toTitleCase';
 
 type TypeProps = {
   handleStepChanged: (value: STEPS) => void;
+  handleFolderType: (type: string) => void;
 };
 
-const Type: FC<TypeProps> = ({ handleStepChanged }) => {
+const Type: FC<TypeProps> = ({ handleStepChanged, handleFolderType }) => {
   const [value, setValue] = useState(TYPE_SELECT.FRONT);
   const handleCreate = () => {
-    handleStepChanged(STEPS.TYPE);
+    handleStepChanged(STEPS.DONE);
+    handleFolderType(value);
   };
 
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -22,12 +25,12 @@ const Type: FC<TypeProps> = ({ handleStepChanged }) => {
       <div className="p-2 pt-6 flex justify-center">
         <div>
           <select
-            className="w-60 h-10"
+            className="shadow border rounded w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             onChange={handleSelectChange}
             value={value}
           >
-            <option>{TYPE_SELECT.FRONT}</option>
-            <option>{TYPE_SELECT.BACK}</option>
+            <option>{toTitleCase(TYPE_SELECT.FRONT)}</option>
+            <option>{toTitleCase(TYPE_SELECT.BACK)}</option>
           </select>
         </div>
         <div className="pl-4">

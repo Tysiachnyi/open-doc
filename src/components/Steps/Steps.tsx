@@ -21,9 +21,7 @@ const Steps: FC<StepsProps> = ({ currentStep }) => {
         <li className={currentClassName(currentStep === STEPS.TYPE)}>
           Documentation type
         </li>
-        <li className={currentClassName(currentStep === STEPS.DONE)}>
-          Completed
-        </li>
+        <li className={currentClassName(currentStep === STEPS.DONE)}>Finish</li>
       </ul>
     </div>
   );

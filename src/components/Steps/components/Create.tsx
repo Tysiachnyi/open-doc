@@ -3,9 +3,10 @@ import { STEPS } from '../../../constants/Steps';
 
 type CreateProps = {
   handleStepChanged: (value: STEPS) => void;
+  handleFolderName: (name: string) => void;
 };
 
-const Create: FC<CreateProps> = ({ handleStepChanged }) => {
+const Create: FC<CreateProps> = ({ handleStepChanged, handleFolderName }) => {
   const [value, setValue] = useState('');
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -14,6 +15,7 @@ const Create: FC<CreateProps> = ({ handleStepChanged }) => {
 
   const handleCreate = () => {
     handleStepChanged(STEPS.TYPE);
+    handleFolderName(value);
   };
 
   return (
