@@ -1,12 +1,12 @@
-import { ChangeEvent, FC, useState } from "react";
-import { STEPS } from "../../../constants/Steps";
+import { ChangeEvent, FC, useState } from 'react';
+import { STEPS } from '../../../constants/Steps';
 
 type CreateProps = {
   handleStepChanged: (value: STEPS) => void;
 };
 
 const Create: FC<CreateProps> = ({ handleStepChanged }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
@@ -29,6 +29,7 @@ const Create: FC<CreateProps> = ({ handleStepChanged }) => {
         />
         <div className="pl-4">
           <button
+            type="submit"
             onClick={handleCreate}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
