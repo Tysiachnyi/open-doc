@@ -41,7 +41,7 @@ const ViewProjects = () => {
     };
 
     fetchData();
-  }, []);
+  }, [QUERY, graphcms]);
 
   return (
     <main>
