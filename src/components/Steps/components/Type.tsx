@@ -25,7 +25,7 @@ const Type: FC<TypeProps> = ({ handleStepChanged, handleFolderType }) => {
       <div className="p-2 pt-6 flex justify-center">
         <div>
           <select
-            className="shadow border rounded w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow border rounded w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline appearance-none"
             onChange={handleSelectChange}
             value={value}
           >
