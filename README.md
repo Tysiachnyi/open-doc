@@ -1,9 +1,10 @@
 # OPEN-DOC
 
 ## STACK
-Front: React,TS
 
-Back: Node.js(strapi)
+Front: React, TS, TailwindCSS, GraphQL
+
+Back: graphcms
 
 ## WIP
 
