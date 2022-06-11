@@ -1,6 +1,6 @@
 const Contact = () => (
   <div>
-    <h1>Contact page</h1>
+    <h1>Nik Tysiachnyi</h1>
   </div>
 );
 
