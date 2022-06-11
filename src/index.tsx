@@ -9,6 +9,7 @@ import { ROUTES } from './constants/Routes';
 import CreateDocumentation from './routes/CreateDocumentation/CreateDocumentation';
 import About from './routes/About/About';
 import Contact from './routes/Contact/Contact';
+import ViewProjects from './routes/Projects/ViewProjects';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,6 +23,7 @@ ReactDOM.render(
           />
           <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path={ROUTES.CONTACT} element={<Contact />} />
+          <Route path={ROUTES.VIEW_PROJECTS} element={<ViewProjects />} />
           <Route path="/" element={<Navigate to={ROUTES.HOME} />} />
           <Route
             path="*"

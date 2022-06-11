@@ -74,6 +74,13 @@ export default function Example() {
                     Create Documentation
                   </Link>
                 </button>
+                <span className="pl-2" />
+                <button
+                  type="button"
+                  className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                >
+                  <Link to={ROUTES.VIEW_PROJECTS}>View Documentation</Link>
+                </button>
               </div>
             </div>
           </div>
