@@ -79,7 +79,7 @@ export default function Example() {
                   type="button"
                   className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
                 >
-                  <Link to={ROUTES.VIEW_PROJECTS}>View Documentation</Link>
+                  <Link to={ROUTES.PROJECTS}>View Documentation</Link>
                 </button>
               </div>
             </div>

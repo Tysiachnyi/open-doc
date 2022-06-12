@@ -3,5 +3,6 @@ export enum ROUTES {
   CREATE_DOCUMENTATION = 'create-documentation',
   ABOUT = 'about',
   CONTACT = 'contact',
-  VIEW_PROJECTS = 'view-projects',
+  PROJECTS = 'projects',
+  PROJECT = 'project',
 }
