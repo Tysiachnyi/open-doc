@@ -7,19 +7,24 @@ import Done from '../../components/Steps/components/Done';
 
 const CreateDocumentation = () => {
   const [currentStep, setCurrentStep] = useState(STEPS.CREATE);
-  const [folderName, setFolderName] = useState('');
-  const [folderType, setFolderType] = useState('');
+  const [apiName, setApiName] = useState('');
+  const [apiType, setApiType] = useState('');
+  const [apiDescription, setApiDescription] = useState('');
 
   const handleStepChanged = (value: STEPS) => {
     setCurrentStep(value);
   };
 
   const handleFolderName = (name: string) => {
-    setFolderName(name);
+    setApiName(name);
   };
 
   const handleFolderType = (type: string) => {
-    setFolderType(type);
+    setApiType(type);
+  };
+
+  const handleFolderDescription = (value: string) => {
+    setApiDescription(value);
   };
 
   return (
@@ -34,12 +39,17 @@ const CreateDocumentation = () => {
         )}
         {currentStep === STEPS.TYPE && (
           <Type
+            handleDescription={handleFolderDescription}
             handleStepChanged={handleStepChanged}
             handleFolderType={handleFolderType}
           />
         )}
         {currentStep === STEPS.DONE && (
-          <Done folderName={folderName} folderType={folderType} />
+          <Done
+            folderName={apiName}
+            folderType={apiType}
+            apiDescription={apiDescription}
+          />
         )}
       </div>
     </main>

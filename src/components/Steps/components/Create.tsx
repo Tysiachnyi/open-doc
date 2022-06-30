@@ -20,12 +20,12 @@ const Create: FC<CreateProps> = ({ handleStepChanged, handleFolderName }) => {
 
   return (
     <div>
-      <div className="p-2 text-center text-2xl">Your folder name</div>
+      <div className="p-2 text-center text-2xl">Your api name</div>
       <div className="p-2 pt-6 flex justify-center">
         <input
           className="shadow appearance-none border rounded w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
-          placeholder="Folder name"
+          placeholder="Api name"
           onChange={handleChange}
           value={value}
         />

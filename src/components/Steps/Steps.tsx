@@ -16,7 +16,7 @@ const Steps: FC<StepsProps> = ({ currentStep }) => {
     <div className="pt-6">
       <ul className="flex justify-center gap-8">
         <li className={currentClassName(currentStep === STEPS.CREATE)}>
-          Create Project
+          Create Api
         </li>
         <li className={currentClassName(currentStep === STEPS.TYPE)}>
           Documentation type
