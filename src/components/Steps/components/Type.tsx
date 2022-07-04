@@ -1,7 +1,9 @@
 import { ChangeEvent, FC, useState } from 'react';
+import ReactQuill from 'react-quill';
 import { TYPE_SELECT } from '../../../constants/misc';
 import { STEPS } from '../../../constants/Steps';
 import { toTitleCase } from '../../../utils/toTitleCase';
+import 'react-quill/dist/quill.snow.css';
 
 type TypeProps = {
   handleStepChanged: (value: STEPS) => void;
@@ -16,6 +18,7 @@ const Type: FC<TypeProps> = ({
 }) => {
   const [type, setType] = useState(TYPE_SELECT.FRONT);
   const [description, setDescription] = useState('');
+
   const handleCreate = () => {
     handleStepChanged(STEPS.DONE);
     handleFolderType(type);
@@ -26,8 +29,8 @@ const Type: FC<TypeProps> = ({
     setType(event.target.value as TYPE_SELECT);
   };
 
-  const handleDescriptionChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    setDescription(event.target.value as string);
+  const handleDescriptionChange = (content: string) => {
+    setDescription(content);
   };
 
   return (
@@ -48,11 +51,12 @@ const Type: FC<TypeProps> = ({
       <div className="p-2 text-center text-2xl">
         Add information about your api
       </div>
-      <div className="p-2 pt-6 flex justify-center">
-        <textarea
+      <div className="p-2 pt-6 pb-10 flex justify-center">
+        <ReactQuill
+          className="h-56 max-h-56 w-8/12"
+          theme="snow"
           value={description}
           onChange={handleDescriptionChange}
-          className="resize-none rounded-md border w-72 h-48"
         />
       </div>
       <div className="p-2 pt-6 flex justify-center">

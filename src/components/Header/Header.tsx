@@ -66,21 +66,23 @@ export default function Example() {
                 </div>
               </div>
               <div>
-                <button
-                  type="button"
-                  className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                >
-                  <Link to={ROUTES.CREATE_DOCUMENTATION}>
+                <Link to={ROUTES.CREATE_DOCUMENTATION}>
+                  <button
+                    type="button"
+                    className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                  >
                     Create Documentation
-                  </Link>
-                </button>
+                  </button>
+                </Link>
                 <span className="pl-2" />
-                <button
-                  type="button"
-                  className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                >
-                  <Link to={ROUTES.PROJECTS}>View Documentation</Link>
-                </button>
+                <Link to={ROUTES.PROJECTS}>
+                  <button
+                    type="button"
+                    className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                  >
+                    View Documentation
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
